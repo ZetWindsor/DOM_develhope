@@ -23,17 +23,28 @@ Il tutto utilizzando tutte e 4 le proprietà viste nel video.
     </ul>
     <script>
 
-        const padreDiUl = document.querySelector("ul").parentElement;
-        console.log(`l'elemento padre id ul e'`, padreDiUl);
+        const esercizio1 = async () => {
+            try {
+                const padreDiUl = document.querySelector("ul").parentElement;
+                console.log(`l'elemento padre id ul e'`, padreDiUl);
 
-        const secondoFiglioDiUl = document.querySelector("ul").children[1];
-        console.log(`il secodno elemento figlio di ul e'`, secondoFiglioDiUl);
+                const secondoFiglioDiUl = document.querySelector("ul").children[1];
+                console.log(`il secodno elemento figlio di ul e'`, secondoFiglioDiUl);
 
-        const fratelloSuccSecLi = secondoFiglioDiUl.nextElementSibling;
-        console.log(`l'elemento fratello successivo al secondo li e'`, fratelloSuccSecLi);
+                const fratelloSuccSecLi = secondoFiglioDiUl.nextElementSibling;
+                console.log(`l'elemento fratello successivo al secondo li e'`, fratelloSuccSecLi);
 
-        const fratelloPrexSecLi = secondoFiglioDiUl.previousElementSibling;
-        console.log(`l'elemento fratello precedente al secondo li e'`, fratelloPrexSecLi);
+                const fratelloPrexSecLi = secondoFiglioDiUl.previousElementSibling;
+                console.log(`l'elemento fratello precedente al secondo li e'`, fratelloPrexSecLi);
+
+
+                document.querySelector("ul").children[0].innerText = "testo in piu di inner text";
+            } catch {
+                console.error(error.message);
+            }
+        };
+
+        esercizio1();
 
     </script>
 </body>
