@@ -14,17 +14,22 @@
 </ul>
 
 <script>
-    const parentUl = document.getElementById('parentUl');
-    console.log("Elemento padre di ul:", parentUl.parentElement);
 
-    const secondChild = parentUl.children[1];
-    console.log("Secondo elemento figlio di ul:", secondChild);
 
-    const nextSibling = secondChild.nextElementSibling;
-    console.log("Elemento fratello successivo del secondo li:", nextSibling);
+const $html = document.documentElement;
+const $body = $html.children[1];
+const $ul = $body.children[0];
+const $li2 = $ul.children[1];
 
-    const previousSibling = secondChild.previousElementSibling;
-    console.log("Elemento fratello precedente del secondo li:", previousSibling);
+const state = {};
+
+console.log($ul.parentElement);
+
+console.log($ul.children[1]);
+
+console.log($li2.nextElementSibling);
+
+console.log($li2.previousElementSibling);
 </script>
 
 </body>
